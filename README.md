@@ -166,7 +166,7 @@ The final neural model predicts:
 ### 📊 Test Prediction Distribution  
 This model does **NOT collapse** to the mean (unlike earlier models):
 
-![Heteroscedastic MLP Architecture](figures/Hetro_nll.png)
+![Heteroscedastic MLP Architecture](figures/hnll.png)
 
 Inference statistics:
 - Min = **1.355**  
