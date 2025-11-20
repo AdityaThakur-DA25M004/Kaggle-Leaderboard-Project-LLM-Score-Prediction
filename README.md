@@ -110,7 +110,7 @@ All steps together reproduce the full pipeline and leaderboard results.
 
 Baseline feature-engineered models:
 
-| Model | Performance |
+| Model | Performance (on validation data) |
 |-------|-------------|
 | Linear Regression | RMSE ≈ 0.936 |
 | LightGBM | RMSE ≈ 0.894 |
