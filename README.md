@@ -1,10 +1,12 @@
 # 🌟 Kaggle Leaderboard Project  
-**Author:** Aditya Thakur (DA25M004)  
-**Date:** November 2025  
 
-This repository contains the complete workflow for predicting LLM response-quality scores using multilingual text embeddings, metric embeddings, augmentation strategies, and a final heteroscedastic neural model that achieved **2.055 RMSE** on the public leaderboard.
+#### Name: Aditya Thakur &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Roll No: DA25M004
+
+This repository contains the complete workflow for predicting LLM response-quality scores using multilingual text embeddings, metric embeddings, augmentation strategies, and a final heteroscedastic neural model that achieved **2.055 RMSE** on the public leaderboard and **2.118 RMSE** on private leaderboard.
 
 ---
+
+
 
 # 📌 Table of Contents
 - [1. Project Overview](#1-project-overview)
@@ -20,22 +22,51 @@ This repository contains the complete workflow for predicting LLM response-quali
 
 ---
 
-# 1️⃣ **Project Overview**
+# 1️⃣🚀 How to Reproduce the Complete Results
 
-This project uses a three-notebook pipeline:
+To fully replicate this project end-to-end, **run the notebooks in the following order**:
 
-1. **Initial Assignment Analysis** → preprocessing, MPNet embeddings, PCA/UMAP  
-2. **Model Development Phase** → baseline models, failed balancing attempts, negative sampling  
-3. **Final Model & Evaluation** → heteroscedastic neural model  
+1️⃣ **01 — Initial Assignment Analysis**  
+➡️ Loads + cleans data  
+➡️ Generates MPNet text embeddings  
+➡️ Attaches metric-name embeddings  
+➡️ Runs PCA/UMAP embedding analysis  
+➡️ Saves all preprocessed features for later use  
 
-The objective is to predict human judge scores (**0–10**) for LLM responses given:
+2️⃣ **02 — Model Development Phase**  
+➡️ Builds baseline models (Linear, LGBM, CatBoost, SVR, MLP)  
+➡️ Experiments with balancing methods (oversampling, weighted models, GPML, etc.)  
+➡️ Introduces negative sampling + synthetic low-score generation  
+➡️ Trains LightGBM on augmented features  
 
-- System prompt  
-- User prompt  
-- Response text  
-- Safety metric name  
+3️⃣ **03 — Final Model & Evaluation**  
+➡️ Loads augmented full feature set  
+➡️ Trains the heteroscedastic MLP  
+➡️ Performs 5-fold GroupKFold CV  
+➡️ Computes μ and σ² predictions  
+➡️ Generates final test predictions and submission CSV  
 
 ---
+
+### 🎯 Project Objective
+
+The goal of this project is to **predict human judge scores (0–10)** for LLM responses based on:
+
+- **System prompt**  
+- **User prompt**  
+- **LLM response text**  
+- **Safety metric name**  
+
+Using:
+
+- MPNet multilingual embeddings  
+- Metric-name embeddings  
+- Augmented negative samples  
+- LightGBM  
+- Final heteroscedastic neural network  
+
+All steps together reproduce the full pipeline and leaderboard results.
+
 
 # 2️⃣ **Dataset & Preprocessing**
 
