@@ -155,9 +155,11 @@ The final neural model predicts:
 
 
 ### 📌 Loss Function
-\[
+
+$$
 \mathcal{L} = 0.45 \cdot NLL + 0.55 \cdot MAE
-\]
+$$
+
 
 ### 📘 Cross-Validation Results
 - Best fold MAE: **1.49–1.70**  
