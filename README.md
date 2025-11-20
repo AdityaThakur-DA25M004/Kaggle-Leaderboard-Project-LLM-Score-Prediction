@@ -149,7 +149,7 @@ The final neural model predicts:
 ### 🧠 Model Architecture Diagram  
 (2312-dim input → 3 hidden layers → μ and σ heads)
 
-![Heteroscedastic MLP Architecture](figures/Hetero_nll.png)
+![Heteroscedastic MLP Architecture](figures/Hetro_nll.png)
 
 ### 🔧 Architecture
 
@@ -166,7 +166,7 @@ The final neural model predicts:
 ### 📊 Test Prediction Distribution  
 This model does **NOT collapse** to the mean (unlike earlier models):
 
-![Heteroscedastic MLP Architecture](figures/Hetero_nll.png)
+![Heteroscedastic MLP Architecture](figures/Hetro_nll.png)
 
 Inference statistics:
 - Min = **1.355**  
